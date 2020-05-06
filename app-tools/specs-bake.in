@@ -1,5 +1,5 @@
 *lib:
-!LDFLAGS_BAKE! -L!DESTDIR!/rumprun-!MACHINE_GNU_ARCH!/lib/rumprun-!PLATFORM!	\
+!LDFLAGS_BAKE! -L!DESTDIR!/rumprun-!MACHINE_GNU_ARCH!/lib/rumprun-!PLATFORM! -z max-page-size=0x200000	\
     --whole-archive -lrump --no-whole-archive				\
     --start-group -lpthread -lc !DESTDIR!/../../../../libvibrio.a --end-group
 
